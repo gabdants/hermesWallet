@@ -12,6 +12,25 @@ public class Titulo {
     String municipio;
     String uf;
     String dtEmissao;
+    String token;
+    String type;
+    String _id;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getCpf() {
         return cpf;
@@ -91,5 +110,33 @@ public class Titulo {
 
     public void setDtEmissao(String dtEmissao) {
         this.dtEmissao = dtEmissao;
+    }
+
+
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    @Override
+    public String toString() {
+        return "titulo: \n" +
+                "{" +
+                "cpf='" + cpf + '\'' +
+                ", nomeEleitor='" + nomeEleitor + '\'' +
+                ", dtNasc='" + dtNasc + '\'' +
+                ", numInscricao='" + numInscricao + '\'' +
+                ", dv='" + dv + '\'' +
+                ", zona='" + zona + '\'' +
+                ", sessao='" + sessao + '\'' +
+                ", municipio='" + municipio + '\'' +
+                ", uf='" + uf + '\'' +
+                ", dtEmissao='" + dtEmissao + '\'' +
+                ", token='" + token + '\'' +
+                '}';
     }
 }

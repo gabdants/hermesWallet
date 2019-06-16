@@ -10,6 +10,25 @@ public class Rg {
     String naturalidade;
     String dtNasc;
     String dtExped;
+    String token;
+    String type;
+    String _id;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
 
     public String getCpf() {
@@ -66,5 +85,28 @@ public class Rg {
 
     public void setDtExped(String dtExped) {
         this.dtExped = dtExped;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    @Override
+    public String toString() {
+        return "rg: \n" +
+                "{" +
+                "cpf='" + cpf + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", filiacaoPai='" + filiacaoPai + '\'' +
+                ", filiacaoMae='" + filiacaoMae + '\'' +
+                ", naturalidade='" + naturalidade + '\'' +
+                ", dtNasc='" + dtNasc + '\'' +
+                ", dtExped='" + dtExped + '\'' +
+                ", token='" + token + '\'' +
+                '}';
     }
 }
