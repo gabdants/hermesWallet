@@ -71,7 +71,7 @@ public class AuthController {
 
             UserToken userToken = new UserToken();
             userToken.setMessage("SUCCEEDED");
-            userToken.setToken("citizen_token: " + tok);
+            userToken.setToken(tok);
 
             return userToken;
 
