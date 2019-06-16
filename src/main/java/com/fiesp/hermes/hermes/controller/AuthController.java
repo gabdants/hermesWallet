@@ -31,10 +31,14 @@ public class AuthController {
 
     Util util = new Util();
 
-    @PostMapping
-    Object authenticate(@RequestBody GovUser user, HttpServletRequest request){
+    @GetMapping
+    Object authenticate(@RequestParam(name = "cpf") String cpf, @RequestParam(name = "pass") String pass, HttpServletRequest request){
         String token = request.getHeader("app_token");
         ErrorMessage errorMessage = new ErrorMessage();
+        GovUser user = new GovUser();
+        user.setCpf(cpf);
+        user.setPass(pass);
+
         try{
             Token djaman = TokenRepository.findByTokenid(token);
             if (djaman == null){
